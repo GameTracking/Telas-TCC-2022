@@ -1,0 +1,62 @@
+
+*{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+body {
+  margin: 0;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #EEEE;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/*Padding na div que todas as telas estao*/
+
+.App{
+  padding:30px;
+}
+
+/*Formularios de login, logar e sugestão*/
+
+.form-container{
+  padding: 50px 10px;
+}
+
+.entrada{
+  background: #fff;
+  outline: none;
+  padding: 3px;
+}
+
+.enviar{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/*Sobre*/
+
+.h1-sobre{
+  font-size: 2em!important;
+  font-weight: bold!important;
+}
+
+.p-sobre{
+  font-size: 18px!important;
+}
+
+
+.form-sobre{
+  background: #fff;
+  border-radius: 10px;
+  padding: 50px 10px;
+}
