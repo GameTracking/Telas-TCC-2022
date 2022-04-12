@@ -2,77 +2,126 @@
 import '../App.css';
 
 import { Typography, Grid, TextField, Button, Link, TextareaAutosize } from '@mui/material';
+import { makeStyles, createStyles } from '@mui/styles';
+import Box from '@mui/material/Box';
 
 function Sugestao() {
 
- 
+
+  const classes = useStyles();
+
 
   return (
-    
+
 
     <div className="App">
 
-      <Typography variant="h4" align="left" ml={2} mt={5} >
+      <Typography variant="h4" align="left" ml={1} mt={5} >
         Enviar Sugestão
       </Typography>
 
 
-    
+
       <Grid className="form-container" container spacing={2}>
 
         <Grid md={6} xs={12} item >
 
-        <Typography variant="body1" align="left" pb={1} >Nome:</Typography>
+          <Typography variant="body1" align="left" pb={1} >Nome:</Typography>
 
           <Grid md={12} item >
-            <TextField  className="entrada" fullWidth={true} size="small" />
+            <Box sx={{ boxShadow: 2 }}>
+              <TextField
+                InputProps={{
+                  className: classes.input,
+                  disableUnderline: true,
+                }}
+                className="entrada"
+                fullWidth={true}
+                size="small"
+                variant="standard"
+              />
+            </Box>
           </Grid>
 
         </Grid>
+
+
 
         <Grid md={6} xs={12} item >
 
-        <Typography variant="body1" align="left" pb={1} >Telefone (Opcional):</Typography>
+          <Typography variant="body1" align="left" pb={1} >Email:</Typography>
 
           <Grid md={12} item >
-            <TextField  className="entrada" fullWidth={true} size="small" />
+            <Box sx={{ boxShadow: 2 }}>
+              <TextField
+                InputProps={{
+                  className: classes.input,
+                  disableUnderline: true,
+                }}
+                className="entrada"
+                fullWidth={true}
+                size="small"
+                variant="standard"
+              />
+            </Box>
           </Grid>
 
         </Grid>
+
+
 
         <Grid md={6} xs={12} item >
 
-        <Typography variant="body1" align="left" pb={1} >Email:</Typography>
+          <Typography variant="body1" align="left" pb={1} >Telefone (opcional):</Typography>
 
           <Grid md={12} item >
-            <TextField  className="entrada" fullWidth={true} size="small" />
+            <Box sx={{ boxShadow: 2 }}>
+              <TextField
+                InputProps={{
+                  className: classes.input,
+                  disableUnderline: true,
+                }}
+                className="entrada"
+                fullWidth={true}
+                size="small"
+                variant="standard"
+              />
+            </Box>
+          </Grid>
+
+          <Grid md={12} item mt={7}  >
+            <div className="enviar" >
+              <Button style={{ background: "#97A8FF", color: "#000" }} variant="contained">Enviar</Button>
+            </div>
           </Grid>
 
         </Grid>
+
 
         <Grid md={6} xs={12} item >
 
-        <Typography variant="body1" align="left" pb={1} >Mensagem:</Typography>
+          <Typography variant="body1" align="left" pb={1} >Mensagem:</Typography>
 
           <Grid md={12} item >
-            <TextareaAutosize
-                aria-label="minimum height"
-                minRows={8}
-                placeholder="Digite sua mensagem"
-                style={{ width: "99%", resize: "none" }}
-                />
+            <Box sx={{ boxShadow: 2 }}>
+              <TextField
+                InputProps={{
+                  className: classes.input,
+                  disableUnderline: true,
+                }}
+                className="entrada"
+                fullWidth={true}
+                size="small"
+                variant="standard"
+                multiline
+                rows={5}
+              />
+            </Box>
           </Grid>
 
         </Grid>
 
-        <Grid md={12} item >
-        <div className="enviar" >
-            <Button variant="contained">Cadatrar</Button>
-            <Link ml={2} href="#" variant="body1">
-            {'Já possuí uma conta ? Logar-se'}
-            </Link>
-         </div>
-        </Grid>
+
 
       </Grid>
 
@@ -80,5 +129,12 @@ function Sugestao() {
 
   );
 }
+
+const useStyles = makeStyles(() => ({
+  input: {
+    backgroundColor: "#FFF",
+    padding: 5
+  }
+}));
 
 export default Sugestao;
